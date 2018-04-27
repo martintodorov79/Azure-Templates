@@ -35,6 +35,13 @@
             "minlength": 2,
             "maxlength": 15
         },
+        "RootDC1IPAddress": {
+            "type": "string",
+            "metadata": {
+                "description": "The IP address of the first DC of the root domain."
+            },
+            "defaultValue": "10.0.0.4"
+        },
     "_artifactsLocation": {
       "type": "string",
       "metadata": {
