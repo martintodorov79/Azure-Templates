@@ -26,6 +26,15 @@
         "description": "The DNS prefix for the public IP address used by the Load Balancer"
       }
     },
+        "RootDC1Name": {
+            "type": "string",
+            "metadata": {
+                "description": "The computer name of the first DC of the root domain."
+            },
+            "defaultValue": "rootdc1",
+            "minlength": 2,
+            "maxlength": 15
+        },
     "_artifactsLocation": {
       "type": "string",
       "metadata": {
