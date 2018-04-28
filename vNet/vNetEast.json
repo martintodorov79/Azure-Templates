@@ -2,24 +2,24 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "name": {
-            "type": "string"
-        },
-        "location": {
-            "type": "string"
-        },
-        "addressPrefix": {
-            "type": "string"
-        },
-        "subnetName": {
-            "type": "string"
-        },
-        "subnetAddressPrefix": {
-            "type": "string"
-        },
-        "enableDdosProtection": {
-            "type": "bool"
-        }
+    "name": {
+      "value": "vNetEast"
+    },
+    "location": {
+      "value": "East US"
+    },
+    "addressPrefix": {
+      "value": "10.1.0.0/16"
+    },
+    "subnetName": {
+      "value": "Subnet-A"
+    },
+    "subnetAddressPrefix": {
+      "value": "10.1.0.0/24"
+    },
+    "enableDdosProtection": {
+      "value": true
+    }
     },
     "resources": [
         {
