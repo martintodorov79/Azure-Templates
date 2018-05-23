@@ -54,6 +54,12 @@
               "properties": {
                 "addressPrefix": "[parameters('subnetRange')]"
               }
+            },
+              {
+              "name": "[parameters('subnetName2')]",
+              "properties": {
+                "addressPrefix": "[parameters('subnetRange2')]"
+              }
             }
           ]
         }
