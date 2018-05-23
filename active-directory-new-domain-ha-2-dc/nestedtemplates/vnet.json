@@ -34,6 +34,13 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "networkSecurityGroupName": {
+      "defaultValue": "NSGEast",
+      "type": "String",
+      "metadata": {
+        "description": "Network Security Group Name"
+      }
     }
   },
   "resources": [
@@ -52,11 +59,17 @@
           {
             "name": "[parameters('subnetName')]",
             "properties": {
-              "addressPrefix": "[parameters('subnetRange')]"
+              "addressPrefix": "[parameters('subnetRange')]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+              }
             }
           }
         ]
-      }
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]"
+      ]
     }
   ]
 }
