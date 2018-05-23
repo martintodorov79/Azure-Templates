@@ -32,7 +32,8 @@
 "type": "string",
 "metadata": {
 "Description": "The name of the subnet created in the new VNET"
-}
+},
+"defaultValue": "Subnet-B"
 },
 "subnetRange2": {
 "type": "string",
