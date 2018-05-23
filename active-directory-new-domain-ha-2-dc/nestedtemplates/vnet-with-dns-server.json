@@ -26,21 +26,21 @@
       "metadata": {
         "Description": "The address range of the subnet created in the new VNET"
       },
-      "defaultValue": "10.0.0.0/24"
+      "defaultValue": "10.1.1.0/24"
     },
-       "subnetName2": {
-        "type": "string",
-        "metadata": {
-          "Description": "The name of the subnet created in the new VNET"
-        }
-      },
-      "subnetRange2": {
-        "type": "string",
-        "metadata": {
-          "Description": "The address range of the subnet created in the new VNET"
-        },
-        "defaultValue": "10.1.2.0/24"
-      },
+    "subnetName2": {
+"type": "string",
+"metadata": {
+"Description": "The name of the subnet created in the new VNET"
+}
+},
+"subnetRange2": {
+"type": "string",
+"metadata": {
+"Description": "The address range of the subnet created in the new VNET"
+},
+"defaultValue": "10.1.2.0/24"
+},
     "DNSServerAddress": {
       "type": "array",
       "metadata": {
@@ -71,19 +71,19 @@
           "dnsServers": "[parameters('DNSServerAddress')]"
         },
         "subnets": [
-          {
-            "name": "[parameters('subnetName')]",
-            "properties": {
-              "addressPrefix": "[parameters('subnetRange')]"
-            }
-          },
+            {
+              "name": "[parameters('subnetName')]",
+              "properties": {
+                "addressPrefix": "[parameters('subnetRange')]"
+              }
+            },
               {
               "name": "[parameters('subnetName2')]",
               "properties": {
                 "addressPrefix": "[parameters('subnetRange2')]"
               }
             }
-        ]
+          ]
       }
     }
   ]
