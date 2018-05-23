@@ -36,6 +36,7 @@
       }
     },
     "networkSecurityGroupName": {
+      "defaultValue": "NSGEast",
       "type": "String",
       "metadata": {
         "description": "Network Security Group Name"
