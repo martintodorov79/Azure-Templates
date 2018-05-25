@@ -19,7 +19,8 @@
         "type": "string",
         "metadata": {
           "Description": "The name of the subnet created in the new VNET"
-        }
+        },
+        "defaultValue": "Subnet-A"
       },
       "subnetRange": {
         "type": "string",
@@ -28,19 +29,20 @@
         },
         "defaultValue": "10.1.1.0/24"
       },
-      "subnetName2": {
-"type": "string",
-"metadata": {
-  "Description": "The name of the subnet created in the new VNET"
-}
-},
-"subnetRange2": {
-"type": "string",
-"metadata": {
-  "Description": "The address range of the subnet created in the new VNET"
-},
-"defaultValue": "10.1.2.0/24"
-},
+        "subnetName2": {
+    "type": "string",
+    "metadata": {
+    "Description": "The name of the subnet created in the new VNET"
+    },
+    "defaultValue": "Subnet-B"
+    },
+    "subnetRange2": {
+    "type": "string",
+    "metadata": {
+    "Description": "The address range of the subnet created in the new VNET"
+    },
+    "defaultValue": "10.1.2.0/24"
+    },
       "DNSServerAddress": {
         "type": "array",
         "metadata": {
