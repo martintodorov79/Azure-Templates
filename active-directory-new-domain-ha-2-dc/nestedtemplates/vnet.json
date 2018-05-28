@@ -43,6 +43,13 @@
         },
         "defaultValue": "10.1.2.0/24"
       },
+        "networkSecurityGroupName": {
+            "defaultValue": "NSGEast",
+            "type": "String",
+            "metadata": {
+                "description": "Network Security Group Name"
+            }
+        },
       "location": {
         "type": "string",
         "defaultValue": "[resourceGroup().location]",
@@ -67,13 +74,19 @@
             {
               "name": "[parameters('subnetName')]",
               "properties": {
-                "addressPrefix": "[parameters('subnetRange')]"
+                "addressPrefix": "[parameters('subnetRange')]",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+                            }
               }
             },
               {
               "name": "[parameters('subnetName2')]",
               "properties": {
-                "addressPrefix": "[parameters('subnetRange2')]"
+                "addressPrefix": "[parameters('subnetRange2')]",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+                            }
               }
             }
           ]
